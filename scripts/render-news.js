@@ -32,9 +32,7 @@
         ]);
         return monthMap.get(+date[1])
     }
-    console.log(randArray);
     for (r of randArray) {
-        console.log(r);
         render += `<hr /> <article>
             <div class="news-img">
               <div class="img" style="background-image: url(${NEWS[r].img});"></div>
