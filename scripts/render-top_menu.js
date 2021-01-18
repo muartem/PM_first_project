@@ -4,7 +4,6 @@
     let render = ""
     for (tm of Object.keys(TOP_MENU)) {
         if (i > 8) break
-        console.log(TOP_MENU[tm].title);
         render += `<li><a href="${TOP_MENU[tm].url || "#"}">${TOP_MENU[tm].title}</a>`
         if (TOP_MENU[tm].submenu) {
             render += `<span class="tri">&#9660;</span><ul class="drop-down">`
