@@ -6,5 +6,5 @@ updateCart(BASKET.elements, BASKET.price)
 
 function updateCart(count, price){
     CART_counter.innerText = count
-    CART_pricer.innerText = price + CURRENCY
+    CART_pricer.innerText = price + " " + CURRENCY
 }
