@@ -6,8 +6,8 @@ const CURRENCY_EXCHANGE = {
 };
 
 const BASKET = {
-    elements: 4,
-    price: 4000,
+    elements: 2,
+    price: 3000,
 };
 
 const TOP_MENU = {
