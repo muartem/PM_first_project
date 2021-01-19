@@ -33,16 +33,19 @@
     }
 
 
+
     let timerId = setInterval(nextSlide, 1500);
 
     let changeSlide = () => {
+        let j = 0
         for (let slide = 0; slide < slider_ids.length; slide++) {
             slider_ids[slide].classList.remove('active')
             if (slide == currant) {
                 slider_ids[slide].classList.add('active')
-                sliderBox.style.backgroundImage = `url('img/slider_${slide}.png')`
+                sliderBox.style.backgroundImage = `url('${slides[j].img}')`
             }
         }
+        j++
     }
 
 })()
