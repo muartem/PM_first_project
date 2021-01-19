@@ -2,7 +2,7 @@
     let items = ITEMS
     const promArea = document.querySelector(".promotion").querySelector(".crd-view")
 
-    console.log(promArea)
+
     let render = ""
     for(p of PROMOTIONS){
         render +=
