@@ -35,7 +35,7 @@
     for (r of randArray) {
         render += `<hr /> <article>
             <div class="news-img">
-              <div class="img" style="background-image: url(${NEWS[r].img});"></div>
+              <div class="img" style="background-image: url(${NEWS[r].img||defaultIMG});"></div>
               <div class="news-day">${getDay(NEWS[r].date)}</div>
               <p class="news-mounts">${getMonth(NEWS[r].date)}</p>
             </div>

@@ -84,7 +84,7 @@
             render +=
                 `<div class="card">
                       <div class="crd-label ${f.type}-label"></div>
-                      <div class="crd-img" style="background-image: url(${f.img})"></div>
+                      <div class="crd-img" style="background-image: url(${f.img||defaultIMG})"></div>
                       <a href="${f.url}" class="crd-link">${f.description}</a>
                       <p class="crd-price">
                         Цена:

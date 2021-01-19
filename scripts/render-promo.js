@@ -7,7 +7,7 @@
         render +=
             `<div class="card card-prom">
               <a href="${p.url}" class="crd-link">${p.title}</a>
-              <div class="crd-img-prom" style="background-image: url(${p.img})" ></div>
+              <div class="crd-img-prom" style="background-image: url(${p.img||defaultIMG})" ></div>
               <p class="crd-price">${p.description}</p>`
         let nt = []
         if(p.time_action){
