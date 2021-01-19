@@ -19,14 +19,14 @@
         const slider_prev_min = card_slider.querySelector('.min-prev')
         const slider_next_min = card_slider.querySelector('.min-next')
         const cards = card_slider.querySelectorAll('.card')
-        slider_prev.style.color = '#aaa'
+        slider_prev.querySelector("path").style.fill = '#aaa'
         slider_prev_min.classList.add('dmb')
 
         let step = 0
 
         // если и так все видно слайдер не активный)
         if (cards.length <= viev_cards){
-            slider_next.style.color = '#aaa'
+            slider_next.querySelector("path").style.fill = '#aaa'
             slider_next_min.classList.add('dmb')
         }
         slider_next.addEventListener('click', next)  //Вперед
@@ -37,12 +37,12 @@
         //вперед
         function next() {
             if (step >= cards.length - viev_cards) return
-            slider_prev.style.color = '#ff5816'
+            slider_prev.querySelector("path").style.fill = '#ff5816'
             slider_prev_min.classList.remove('dmb')
             step++
             change()
             if (step >= cards.length - viev_cards) {
-                slider_next.style.color = '#aaa'
+                slider_next.querySelector("path").style.fill = '#aaa'
                 slider_next_min.classList.add('dmb')
             }
 
@@ -51,13 +51,13 @@
         //назад
         function prev() {
             if (step <= 0) return
-            slider_next.style.color = '#ff5816'
+            slider_next.querySelector("path").style.fill = '#ff5816'
             slider_next_min.classList.remove('dmb')
             step--
             change()
             if (step <= 0) {
                 slider_prev_min.classList.add('dmb')
-                slider_prev.style.color = '#aaa'
+                slider_prev.querySelector("path").style.fill = '#aaa'
             }
         }
         //отрисовка
