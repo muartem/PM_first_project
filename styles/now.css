@@ -3,15 +3,15 @@
   grid-template-columns: max-content 1fr;
 }
 .now__content {
-  justify-content: space-between;
   margin-bottom: 50px;
   width: 100%;
   overflow-x: scroll;
+  gap: 20px;
 }
 
 .now__content-item {
   max-width: 263px;
-  margin-right: 25px;
+  margin-right: 30px;
 }
 
 .now__content-item > .flex {

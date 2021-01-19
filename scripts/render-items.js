@@ -88,8 +88,8 @@
                       <a href="${f.url}" class="crd-link">${f.description}</a>
                       <p class="crd-price">
                         Цена:
-                        <strong>${f.price} ${CURRENCY}.</strong>
-                        <del>${f.oldPrice} ${CURRENCY}.</del>
+                        <strong>${Math.floor(f.price)}  ${CURRENCY}</strong>
+                        <del>${Math.floor(f.oldPrice)} ${CURRENCY}</del>
                       </p>
                       <div class="crd-buy">КУПИТЬ</div>
                       <a class="crd-more">Подробнее</a>
