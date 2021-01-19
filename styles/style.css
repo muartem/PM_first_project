@@ -492,6 +492,9 @@ li:hover > a {
   margin: 0;
   padding: 20px;
 }
+.card-prom > .crd-price{
+  height: 110px;
+}
 .card-prom > .crd-link {
   height: 53px;
   display: block;
