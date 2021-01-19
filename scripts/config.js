@@ -1,4 +1,4 @@
-const CURRENCY = 'UAH';
+const CURRENCY = 'USD';
 
 const CURRENCY_EXCHANGE = {
     USD: 27.96,

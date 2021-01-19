@@ -1,7 +1,6 @@
 (()=>{
     const nowArea = document.querySelector(".now").querySelector(".now__content")
 
-
     let render = ""
     for(b of BUYING_RIGHT_NOW){
         render +=

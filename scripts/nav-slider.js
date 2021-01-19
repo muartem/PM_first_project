@@ -6,7 +6,9 @@
         /* Слайдер сделан при помощи overflow: scroll;
         сам скролл скрыт, но мы можем теперь его двигать :) */
     let scroll = 0
-    if (scroll >= (nav_block3.scrollWidth - nav_block3.clientWidth)) nav_next.classList.add('dis-nav')
+    if (scroll >= (nav_block3.scrollWidth - nav_block3.clientWidth)) {
+        nav_next.classList.add('dis-nav')
+    }
     nav_next.addEventListener('click', () => {
         if (scroll >= (nav_block3.scrollWidth - nav_block3.clientWidth)) {
             scroll = nav_block3.scrollWidth - nav_block3.clientWidth

@@ -7,8 +7,12 @@
     let j = (NEWS.length > 3)? 3 : NEWS.length
     for (let i = 0; i<j;i++){
         let rand = getRandom(NEWS.length)
-        if(randArray.includes(rand)) i--
-        else randArray.push(rand)
+        if(randArray.includes(rand)) {
+            i--
+        }
+        else {
+            randArray.push(rand)
+        }
     }
     let getDay = (d) => {
         const date = d.split('/')

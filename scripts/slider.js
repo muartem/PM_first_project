@@ -44,8 +44,9 @@
                 slider_ids[slide].classList.add('active')
                 sliderBox.style.backgroundImage = `url('${slides[j].img}')`
             }
+            j++
         }
-        j++
+
     }
 
 })()

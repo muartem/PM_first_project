@@ -63,9 +63,9 @@
     }
 
     // выборка
-    let newItems =  items.filter(i => i.type === "new")
-    let recItems = items.filter(i => i.type === "recommended")
-    let saleItems = items.filter(i => i.type === "sale")
+    let newItems =  items.filter(({type}) => type === "new")
+    let recItems = items.filter(({type}) => type === "recommended")
+    let saleItems = items.filter(({type}) => type === "sale")
 
     // сортировка
     newItems.sort((a, b) => a.date < b.date ? 1 : -1)
@@ -76,24 +76,24 @@
     render(newArea, newItems)
     render(recArea, recItems)
     render(saleArea, saleItems)
-
-    function render(to, from){
+    function render(to, itemsArray){
         let area = to.querySelector(".crd-view")
         let render = ""
-        for(f of from){
+        for(item of itemsArray){
             render +=
                 `<div class="card">
-                      <div class="crd-label ${f.type}-label"></div>
-                      <div class="crd-img" style="background-image: url(${f.img||defaultIMG})"></div>
-                      <a href="${f.url}" class="crd-link">${f.description}</a>
+                      <div class="crd-label ${item.type}-label"></div>
+                      <div class="crd-img" style="background-image: url(${item.img||defaultIMG})"></div>
+                      <a href="${item.url}" class="crd-link">${item.description}</a>
                       <p class="crd-price">
                         Цена:
-                        <strong>${Math.floor(f.price)}  ${CURRENCY}</strong>
-                        <del>${Math.floor(f.oldPrice)} ${CURRENCY}</del>
+                        <strong>${Math.floor(item.price)}  ${CURRENCY}</strong>
+                        <del>${Math.floor(item.oldPrice)} ${CURRENCY}</del>
                       </p>
-                      <div class="crd-buy">КУПИТЬ</div>
+                      <div class="crd-buy" onclick='buyItem(${JSON.stringify(item)})'>КУПИТЬ</div> 
                       <a class="crd-more">Подробнее</a>
                     </div>`
+
         }
         area.innerHTML = render
     }
