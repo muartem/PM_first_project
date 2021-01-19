@@ -122,7 +122,7 @@ const ITEMS = [
     {
         type: 'new',
         description: 'IP телефон Siemens Gigaset C530A IP',
-        img: 'https://same_url.jpg',
+        img: 'img/tel_1.png',
         price: '1000',
         oldPrice: '1100',
         currency: 'UAH',
@@ -132,7 +132,7 @@ const ITEMS = [
     {
         type: 'recommended',
         description: 'IP телефон Siemens Gigaset C530A IP',
-        img: 'https://same_url.jpg',
+        img: 'img/tel_2.png',
         price: '500',
         oldPrice: '1100',
         currency: 'RUB',
@@ -142,7 +142,7 @@ const ITEMS = [
     {
         type: 'sale',
         description: 'IP телефон Siemens Gigaset C530A IP',
-        img: 'https://same_url.jpg',
+        img: 'img/tel_3.png',
         price: '150',
         oldPrice: '200',
         currency: 'USD',
@@ -152,7 +152,7 @@ const ITEMS = [
     {
         type: 'new',
         description: 'IP телефон Siemens Gigaset C530A IP',
-        img: 'https://same_url.jpg',
+        img: 'img/tel_2.png',
         price: '1000',
         oldPrice: '1100',
         currency: 'UAH',
@@ -162,7 +162,7 @@ const ITEMS = [
     {
         type: 'recommended',
         description: 'IP телефон Siemens Gigaset C530A IP',
-        img: 'https://same_url.jpg',
+        img: 'img/tel_4.png',
         price: '300',
         oldPrice: '1000',
         currency: 'RUB',
@@ -172,7 +172,7 @@ const ITEMS = [
     {
         type: 'sale',
         description: 'IP телефон Siemens Gigaset C530A IP',
-        img: 'https://same_url.jpg',
+        img: 'img/tel_2.png',
         price: '180',
         oldPrice: '200',
         currency: 'USD',
@@ -182,7 +182,7 @@ const ITEMS = [
     {
         type: 'new',
         description: 'IP телефон Siemens Gigaset C530A IP',
-        img: 'https://same_url.jpg',
+        img:'img/tel_1.png',
         price: '1000',
         oldPrice: '1100',
         currency: 'UAH',
@@ -192,7 +192,7 @@ const ITEMS = [
     {
         type: 'recommended',
         description: 'IP телефон Siemens Gigaset C530A IP',
-        img: 'https://same_url.jpg',
+        img: 'img/tel_1.png',
         price: '3200',
         oldPrice: '1000',
         currency: 'RUB',
@@ -202,7 +202,7 @@ const ITEMS = [
     {
         type: 'sale',
         description: 'IP телефон Siemens Gigaset C530A IP',
-        img: 'https://same_url.jpg',
+        img:'img/tel_4.png',
         price: '50',
         oldPrice: '200',
         currency: 'USD',

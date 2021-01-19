@@ -1,7 +1,7 @@
 (()=>{
     let items = ITEMS
     const newArea = document.querySelector(".new-items")
-    const recArea  = document.querySelector(".recommend")
+    const recArea  = document.querySelector(".recommended")
     const saleArea = document.querySelector(".sale")
 
     // ОБМЕН валют
@@ -71,10 +71,8 @@
     newItems.sort((a, b) => a.date < b.date ? 1 : -1)
     recItems.sort((a, b) => +a.price > +b.price ? 1 : -1)
     saleItems.sort((a, b) => (+a.oldPrice - a.price) < (+b.oldPrice-  b.price) ? 1 : -1)
-    console.log(newItems)
-    console.log(recItems)
-    console.log(saleItems)
 
+    // заполнение
     render(newArea, newItems)
     render(recArea, recItems)
     render(saleArea, saleItems)
@@ -84,10 +82,19 @@
         let render = ""
         for(f of from){
             render +=
-                ``
+                `<div class="card">
+                      <div class="crd-label ${f.type}-label"></div>
+                      <div class="crd-img" style="background-image: url(${f.img})"></div>
+                      <a href="${f.url}" class="crd-link">${f.description}</a>
+                      <p class="crd-price">
+                        Цена:
+                        <strong>${f.price} ${CURRENCY}.</strong>
+                        <del>${f.oldPrice} ${CURRENCY}.</del>
+                      </p>
+                      <div class="crd-buy">КУПИТЬ</div>
+                      <a class="crd-more">Подробнее</a>
+                    </div>`
         }
-      //  area.innerHTML = render
-
-        console.log(area)
+        area.innerHTML = render
     }
 })()

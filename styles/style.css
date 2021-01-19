@@ -438,11 +438,11 @@ li:hover > a {
   color: #4673ab;
   text-decoration: underline;
 }
-.recommend-label {
+.recommended-label {
   background: #f7c159 url(../img/ico_thumb.svg) no-repeat center 9px;
   background-size: 1.5em, 1.5em;
 }
-.recommend-label:after {
+.recommended-label:after {
   border-top: 9px solid #f7c159;
 }
 .new-label {
