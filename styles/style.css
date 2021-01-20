@@ -275,6 +275,13 @@ li:hover > a {
 .crd-prev {
   transform: rotate(180deg);
 }
+button:disabled{
+  background-color: #aaa;
+  cursor: default;
+}
+button:disabled:hover{
+  background-color: #aaa;
+}
 .crd-prev,
 .crd-next {
   width: 16px;

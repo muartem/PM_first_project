@@ -85,12 +85,18 @@
                       <div class="crd-label ${item.type}-label"></div>
                       <div class="crd-img" style="background-image: url(${item.img||defaultIMG})"></div>
                       <a href="${item.url}" class="crd-link">${item.description}</a>
-                      <p class="crd-price">
-                        Цена:
+                      <p class="crd-price" style="min-height:24px;">`
+            render += (item.price)?
+                        `Цена:
                         <strong>${Math.floor(item.price)}  ${CURRENCY}</strong>
-                        <del>${Math.floor(item.oldPrice)} ${CURRENCY}</del>
-                      </p>
-                      <div class="crd-buy" onclick='buyItem(${JSON.stringify(item)})'>КУПИТЬ</div> 
+                        <del>${Math.floor(item.oldPrice)} ${CURRENCY}</del>`
+                            :
+                       `Товар временно не доступен`
+            render += `</p>
+                      <button `
+            if (!item.price) render += ` disabled `
+            render +=
+                    `class="crd-buy" onclick='buyItem(${JSON.stringify(item)})'>КУПИТЬ</button> 
                       <a class="crd-more">Подробнее</a>
                     </div>`
 
