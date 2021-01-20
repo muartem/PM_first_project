@@ -143,7 +143,6 @@ const ITEMS = [
         description: 'IP телефон Siemens Gigaset C530A IP',
         img: 'img/tel_2.png',
         price: '500',
-        oldPrice: '1100',
         currency: 'RUB',
         date: '2020/12/25',
         url: 'new_items/item.html'
@@ -153,7 +152,6 @@ const ITEMS = [
         description: 'IP телефон Siemens Gigaset C530A IP',
         img: 'img/tel_3.png',
         price: '150',
-        oldPrice: '200',
         currency: 'USD',
         date: '2021/01/13',
         url: 'https://same_url/item.html'

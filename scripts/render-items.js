@@ -65,7 +65,7 @@
     // выборка
     let newItems =  items.filter(({type}) => type === "new")
     let recItems = items.filter(({type}) => type === "recommended")
-    let saleItems = items.filter(({type}) => type === "sale")
+    let saleItems = items.filter(({type}) => type === "sale").filter(s => s.oldPrice)
 
     // сортировка
     newItems.sort((a, b) => a.date < b.date ? 1 : -1)
@@ -86,10 +86,13 @@
                       <div class="crd-img" style="background-image: url(${item.img||defaultIMG})"></div>
                       <a href="${item.url}" class="crd-link">${item.description}</a>
                       <p class="crd-price" style="min-height:24px;">`
-            render += (item.price)?
+            render += (item.price&&item.oldPrice)?
                         `Цена:
                         <strong>${Math.floor(item.price)}  ${CURRENCY}</strong>
                         <del>${Math.floor(item.oldPrice)} ${CURRENCY}</del>`
+                            :(item.price)?
+                         `Цена:
+                        <strong>${Math.floor(item.price)}  ${CURRENCY}</strong>`
                             :
                        `Товар временно не доступен`
             render += `</p>
